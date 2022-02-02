@@ -1,0 +1,23 @@
+{
+  "root": "packages/domain/employee",
+  "sourceRoot": "packages/domain/employee/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/domain/employee/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/domain/employee"],
+      "options": {
+        "jestConfig": "packages/domain/employee/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

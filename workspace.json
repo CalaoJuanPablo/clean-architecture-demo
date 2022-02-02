@@ -1,6 +1,10 @@
 {
   "version": 2,
   "projects": {
-    "domain-common": "packages/domain/common"
+    "domain-common": "packages/domain/common",
+    "domain-customer": "packages/domain/customer",
+    "domain-employee": "packages/domain/employee",
+    "domain-product": "packages/domain/product",
+    "domain-sales": "packages/domain/sales"
   }
 }
