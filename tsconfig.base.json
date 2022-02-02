@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@clean-architecture-demo/domain-sale": [
+        "packages/domain/sale/src/index.ts"
+      ],
       "@clean-architecture-demo/domain/common": [
         "packages/domain/common/src/index.ts"
       ],
@@ -26,9 +29,6 @@
       ],
       "@clean-architecture-demo/domain/product": [
         "packages/domain/product/src/index.ts"
-      ],
-      "@clean-architecture-demo/domain/sales": [
-        "packages/domain/sales/src/index.ts"
       ]
     }
   },

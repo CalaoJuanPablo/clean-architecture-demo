@@ -5,6 +5,6 @@
     "domain-customer": "packages/domain/customer",
     "domain-employee": "packages/domain/employee",
     "domain-product": "packages/domain/product",
-    "domain-sales": "packages/domain/sales"
+    "domain-sale": "packages/domain/sale"
   }
 }
