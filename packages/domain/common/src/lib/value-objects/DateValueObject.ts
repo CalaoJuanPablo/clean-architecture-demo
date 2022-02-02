@@ -1,4 +1,4 @@
-export class DateValueObject {
+export abstract class DateValueObject {
   readonly value: Date;
 
   constructor(value: Date) {
