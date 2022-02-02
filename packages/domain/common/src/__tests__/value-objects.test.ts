@@ -3,7 +3,7 @@ import {
   StringValueObject,
   NumberValueObject,
   DateValueObject,
-} from '../../value-objects';
+} from '../lib/value-objects';
 
 class StringTestClass extends StringValueObject {}
 class NumberTestClass extends NumberValueObject {}
