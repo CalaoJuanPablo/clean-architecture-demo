@@ -1,1 +1,1 @@
-export * from './lib/Employee';
+export * from './lib';

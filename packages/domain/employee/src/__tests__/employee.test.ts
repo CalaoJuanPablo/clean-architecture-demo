@@ -1,6 +1,4 @@
-import { Employee } from '@clean-architecture-demo/domain/employee';
-import { EmployeeName } from './../lib/EmployeeName';
-import { EmployeeId } from './../lib/EmployeeId';
+import { Employee, EmployeeName, EmployeeId } from './../lib';
 
 describe('Employee', () => {
   const employeeId = EmployeeId.random();

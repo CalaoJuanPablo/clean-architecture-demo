@@ -15,7 +15,7 @@ interface ISale {
   product: Product;
 }
 
-export class Sales implements IEntity {
+export class Sale implements IEntity {
   readonly id: SaleId;
   readonly date: SaleDate;
   readonly customer: Customer;
@@ -50,7 +50,7 @@ export class Sales implements IEntity {
   }
 
   private _updateTotalPrice() {
-    const totalPrice = this._quantity.value * this._quantity.value;
+    const totalPrice = this._quantity.value * this.product.price.value;
 
     this._totalPrice = new SaleTotalPrice(totalPrice);
   }

@@ -1,7 +1,4 @@
-import { Product } from '@clean-architecture-demo/domain/product';
-import { ProductPrice } from './../lib/ProductPrice';
-import { ProductName } from './../lib/ProductName';
-import { ProductId } from './../lib/ProductId';
+import { Product, ProductId, ProductName, ProductPrice } from '../lib';
 
 describe('Product', () => {
   const productId = ProductId.random();

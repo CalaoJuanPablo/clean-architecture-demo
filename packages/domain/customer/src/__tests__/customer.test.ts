@@ -1,6 +1,4 @@
-import { Customer } from '../lib/Customer';
-import { CustomerId } from '../lib/CustomerId';
-import { CustomerName } from '../lib/CustomerName';
+import { Customer, CustomerId, CustomerName } from '../lib';
 
 describe('Customer', () => {
   const customerId = CustomerId.random();
