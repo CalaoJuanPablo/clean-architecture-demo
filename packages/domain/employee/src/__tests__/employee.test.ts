@@ -1,19 +1,24 @@
-import { Employee, EmployeeName, EmployeeId } from './../lib';
+import { EmployeeEntityFactory } from '../lib/factory';
+import { Employee } from '../lib/Employee';
+import { EmployeeId } from '../lib/EmployeeId';
 
 describe('Employee', () => {
-  const employeeId = EmployeeId.random();
-  const employeeName = new EmployeeName('John Doe');
-  const employee = new Employee({ id: employeeId, name: employeeName });
+  const employeeId = EmployeeId.random().toString();
+  const employeeName = 'John Doe';
+  const employee = EmployeeEntityFactory.employee({
+    id: employeeId,
+    name: employeeName,
+  });
 
   test('employee is an instance of Employee', () => {
     expect(employee).toBeInstanceOf(Employee);
   });
 
   test('employee id is equal to employeeId', () => {
-    expect(employee.id.value).toBe(employeeId.value);
+    expect(employee.id.value).toBe(employeeId);
   });
 
   test('employee name is equal to employeeName', () => {
-    expect(employee.name.value).toBe(employeeName.value);
+    expect(employee.name.value).toBe(employeeName);
   });
 });

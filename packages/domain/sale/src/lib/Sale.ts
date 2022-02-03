@@ -2,20 +2,13 @@ import { IEntity } from '@clean-architecture-demo/domain/common';
 import { Customer } from '@clean-architecture-demo/domain/customer';
 import { Employee } from '@clean-architecture-demo/domain/employee';
 import { Product } from '@clean-architecture-demo/domain/product';
+import { ISale, ISaleJSON } from './interfaces';
 import { SaleDate } from './SaleDate';
 import { SaleId } from './SaleId';
 import { SaleProductQty } from './SaleProductQty';
 import { SaleTotalPrice } from './SaleTotalPrice';
 
-interface ISale {
-  id: SaleId;
-  date: SaleDate;
-  customer: Customer;
-  employee: Employee;
-  product: Product;
-}
-
-export class Sale implements IEntity {
+export class Sale implements IEntity<ISaleJSON> {
   readonly id: SaleId;
   readonly date: SaleDate;
   readonly customer: Customer;
@@ -53,5 +46,17 @@ export class Sale implements IEntity {
     const totalPrice = this._quantity.value * this.product.price.value;
 
     this._totalPrice = new SaleTotalPrice(totalPrice);
+  }
+
+  toJSON(): ISaleJSON {
+    return {
+      id: this.id.toString(),
+      date: this.date.toDate(),
+      customer: this.customer.toJSON(),
+      employee: this.employee.toJSON(),
+      product: this.product.toJSON(),
+      quantity: this._quantity.toNumber(),
+      totalPrice: this._totalPrice.toNumber(),
+    };
   }
 }

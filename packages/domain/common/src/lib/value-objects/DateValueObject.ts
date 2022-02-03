@@ -8,4 +8,8 @@ export abstract class DateValueObject {
   toTimestamp() {
     return this.value.getTime();
   }
+
+  toDate() {
+    return this.value;
+  }
 }

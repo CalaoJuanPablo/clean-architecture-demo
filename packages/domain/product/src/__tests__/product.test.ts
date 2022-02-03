@@ -1,10 +1,12 @@
-import { Product, ProductId, ProductName, ProductPrice } from '../lib';
+import { ProductEntityFactory } from '../lib/factory';
+import { Product } from '../lib/Product';
+import { ProductId } from '../lib/ProductId';
 
 describe('Product', () => {
-  const productId = ProductId.random();
-  const productName = new ProductName('Pasta');
-  const productPrice = new ProductPrice(30);
-  const product = new Product({
+  const productId = ProductId.random().toString();
+  const productName = 'Pasta';
+  const productPrice = 30;
+  const product = ProductEntityFactory.product({
     id: productId,
     name: productName,
     price: productPrice,
@@ -15,14 +17,14 @@ describe('Product', () => {
   });
 
   test('product id is equals to productId', () => {
-    expect(product.id.value).toBe(productId.value);
+    expect(product.id.value).toBe(productId);
   });
 
   test('product name is equals to productName', () => {
-    expect(product.name.value).toBe(productName.value);
+    expect(product.name.value).toBe(productName);
   });
 
   test('product price is equals to productPrice', () => {
-    expect(product.price.value).toBe(productPrice.value);
+    expect(product.price.value).toBe(productPrice);
   });
 });

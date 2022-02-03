@@ -1,39 +1,26 @@
-import { Sale, SaleId, SaleDate } from '../lib';
-import {
-  Customer,
-  CustomerId,
-  CustomerName,
-} from '@clean-architecture-demo/domain/customer';
-import {
-  Employee,
-  EmployeeId,
-  EmployeeName,
-} from '@clean-architecture-demo/domain/employee';
-import {
-  Product,
-  ProductId,
-  ProductName,
-  ProductPrice,
-} from '@clean-architecture-demo/domain/product';
+import { SaleId } from '../lib/SaleId';
+import { SaleEntityFactory } from '../lib/factory';
+import { Uuid } from '@clean-architecture-demo/domain/common';
+import { Sale } from '../lib/Sale';
 
 describe('Sale', () => {
-  const customer = new Customer({
-    id: CustomerId.random(),
-    name: new CustomerName('John Doe'),
-  });
-  const employee = new Employee({
-    id: EmployeeId.random(),
-    name: new EmployeeName('Peter Green'),
-  });
-  const product = new Product({
-    id: ProductId.random(),
-    name: new ProductName('Pasta'),
-    price: new ProductPrice(30),
-  });
+  const customer = {
+    id: Uuid.random().toString(),
+    name: 'John Doe',
+  };
+  const employee = {
+    id: Uuid.random().toString(),
+    name: 'Peter Green',
+  };
+  const product = {
+    id: Uuid.random().toString(),
+    name: 'Pasta',
+    price: 30,
+  };
 
-  const sale = new Sale({
-    id: SaleId.random(),
-    date: new SaleDate(new Date('2020-03-11')),
+  const sale = SaleEntityFactory.sale({
+    id: SaleId.random().toString(),
+    date: new Date('2020-03-11'),
     customer,
     employee,
     product,
