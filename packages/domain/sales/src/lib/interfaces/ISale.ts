@@ -27,6 +27,6 @@ export interface ISaleJSON {
   customer: ICustomerJSON;
   employee: IEmployeeJSON;
   product: IProductJSON;
-  quantity?: number;
-  totalPrice?: number;
+  quantity: number;
+  totalPrice: number;
 }

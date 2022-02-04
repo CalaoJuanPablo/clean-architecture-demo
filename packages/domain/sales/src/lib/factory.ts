@@ -7,7 +7,13 @@ import { EmployeeEntityFactory } from '@clean-architecture-demo/domain-employees
 import { ProductEntityFactory } from '@clean-architecture-demo/domain-products';
 
 export class SaleEntityFactory {
-  static sale = ({ id, date, customer, employee, product }: ISaleJSON) =>
+  static sale = ({
+    id,
+    date,
+    customer,
+    employee,
+    product,
+  }: Omit<ISaleJSON, 'quantity' | 'totalPrice'>) =>
     new Sale({
       id: new SaleId(id),
       date: new SaleDate(date),
