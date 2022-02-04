@@ -2,9 +2,9 @@
   "version": 2,
   "projects": {
     "domain-common": "packages/domain/common",
-    "domain-customer": "packages/domain/customer",
-    "domain-employee": "packages/domain/employee",
-    "domain-product": "packages/domain/product",
-    "domain-sale": "packages/domain/sale"
+    "domain-customers": "packages/domain/customers",
+    "domain-employees": "packages/domain/employees",
+    "domain-products": "packages/domain/products",
+    "domain-sales": "packages/domain/sales"
   }
 }

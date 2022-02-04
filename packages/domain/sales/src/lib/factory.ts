@@ -2,9 +2,9 @@ import { SaleDate } from './SaleDate';
 import { SaleId } from './SaleId';
 import { Sale } from '../lib/Sale';
 import { ISaleJSON } from './interfaces';
-import { CustomerEntityFactory } from '@clean-architecture-demo/domain/customer';
-import { EmployeeEntityFactory } from '@clean-architecture-demo/domain/employee';
-import { ProductEntityFactory } from '@clean-architecture-demo/domain/product';
+import { CustomerEntityFactory } from '@clean-architecture-demo/domain-customers';
+import { EmployeeEntityFactory } from '@clean-architecture-demo/domain-employees';
+import { ProductEntityFactory } from '@clean-architecture-demo/domain-products';
 
 export class SaleEntityFactory {
   static sale = ({ id, date, customer, employee, product }: ISaleJSON) =>

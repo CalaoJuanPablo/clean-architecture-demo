@@ -15,20 +15,20 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@clean-architecture-demo/domain-sale": [
-        "packages/domain/sale/src/index.ts"
+      "@clean-architecture-demo/domain-customers": [
+        "packages/domain/customers/src/index.ts"
+      ],
+      "@clean-architecture-demo/domain-employees": [
+        "packages/domain/employees/src/index.ts"
+      ],
+      "@clean-architecture-demo/domain-products": [
+        "packages/domain/products/src/index.ts"
+      ],
+      "@clean-architecture-demo/domain-sales": [
+        "packages/domain/sales/src/index.ts"
       ],
       "@clean-architecture-demo/domain/common": [
         "packages/domain/common/src/index.ts"
-      ],
-      "@clean-architecture-demo/domain/customer": [
-        "packages/domain/customer/src/index.ts"
-      ],
-      "@clean-architecture-demo/domain/employee": [
-        "packages/domain/employee/src/index.ts"
-      ],
-      "@clean-architecture-demo/domain/product": [
-        "packages/domain/product/src/index.ts"
       ]
     }
   },

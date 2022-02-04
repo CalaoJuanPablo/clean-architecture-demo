@@ -1,20 +1,20 @@
 {
-  "root": "packages/domain/customer",
-  "sourceRoot": "packages/domain/customer/src",
+  "root": "packages/domain/employees",
+  "sourceRoot": "packages/domain/employees/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/domain/customer/**/*.ts"]
+        "lintFilePatterns": ["packages/domain/employees/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/domain/customer"],
+      "outputs": ["coverage/packages/domain/employees"],
       "options": {
-        "jestConfig": "packages/domain/customer/jest.config.js",
+        "jestConfig": "packages/domain/employees/jest.config.js",
         "passWithNoTests": true
       }
     }

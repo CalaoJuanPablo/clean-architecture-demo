@@ -3,12 +3,15 @@ import { SaleDate } from '../SaleDate';
 import {
   Customer,
   ICustomerJSON,
-} from '@clean-architecture-demo/domain/customer';
+} from '@clean-architecture-demo/domain-customers';
 import {
   Employee,
   IEmployeeJSON,
-} from '@clean-architecture-demo/domain/employee';
-import { IProductJSON, Product } from '@clean-architecture-demo/domain/product';
+} from '@clean-architecture-demo/domain-employees';
+import {
+  IProductJSON,
+  Product,
+} from '@clean-architecture-demo/domain-products';
 
 export interface ISale {
   id: SaleId;

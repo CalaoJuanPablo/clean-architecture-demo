@@ -1,7 +1,7 @@
 import { IEntity } from '@clean-architecture-demo/domain/common';
-import { Customer } from '@clean-architecture-demo/domain/customer';
-import { Employee } from '@clean-architecture-demo/domain/employee';
-import { Product } from '@clean-architecture-demo/domain/product';
+import { Customer } from '@clean-architecture-demo/domain-customers';
+import { Employee } from '@clean-architecture-demo/domain-employees';
+import { Product } from '@clean-architecture-demo/domain-products';
 import { ISale, ISaleJSON } from './interfaces';
 import { SaleDate } from './SaleDate';
 import { SaleId } from './SaleId';
