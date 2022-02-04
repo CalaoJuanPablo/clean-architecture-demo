@@ -12,6 +12,7 @@ import {
   IProductJSON,
   Product,
 } from '@clean-architecture-demo/domain-products';
+import { Sale } from '../Sale';
 
 export interface ISale {
   id: SaleId;
@@ -29,4 +30,10 @@ export interface ISaleJSON {
   product: IProductJSON;
   quantity: number;
   totalPrice: number;
+}
+
+export interface ISaleRepository {
+  getAll(): Promise<Array<Sale>>;
+  get(id: SaleId): Promise<Sale>;
+  add(sale: Sale): Promise<void>;
 }
