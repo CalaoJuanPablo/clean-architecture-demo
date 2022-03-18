@@ -5,7 +5,8 @@ import { CustomerId } from '../lib/CustomerId';
 describe('Customer', () => {
   const customerId = CustomerId.random().toString();
   const customerName = 'John Doe';
-  const customer = CustomerEntityFactory.customerEntity({
+  const customerEntityFactory = new CustomerEntityFactory();
+  const customer = customerEntityFactory.createCustomer({
     id: customerId,
     name: customerName,
   });

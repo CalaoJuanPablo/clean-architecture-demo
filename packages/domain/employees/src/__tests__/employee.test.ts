@@ -5,7 +5,8 @@ import { EmployeeId } from '../lib/EmployeeId';
 describe('Employee', () => {
   const employeeId = EmployeeId.random().toString();
   const employeeName = 'John Doe';
-  const employee = EmployeeEntityFactory.employee({
+  const employeeEntityFactory = new EmployeeEntityFactory();
+  const employee = employeeEntityFactory.createEmployee({
     id: employeeId,
     name: employeeName,
   });

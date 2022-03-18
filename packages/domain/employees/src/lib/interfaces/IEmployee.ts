@@ -16,3 +16,7 @@ export interface IEmployeeRepository {
   getAll(): Promise<Array<Employee>>;
   get(id: EmployeeId): Promise<Employee>;
 }
+
+export interface IEmployeeEntityFactory {
+  createEmployee({ id, name }: IEmployeeJSON): Employee;
+}

@@ -1,0 +1,23 @@
+{
+  "root": "packages/infraestructure/customers",
+  "sourceRoot": "packages/infraestructure/customers/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/infraestructure/customers/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/infraestructure/customers"],
+      "options": {
+        "jestConfig": "packages/infraestructure/customers/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

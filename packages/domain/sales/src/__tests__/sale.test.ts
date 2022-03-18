@@ -18,7 +18,8 @@ describe('Sale', () => {
     price: 30,
   };
 
-  const sale = SaleEntityFactory.sale({
+  const saleEntityFactory = new SaleEntityFactory();
+  const sale = saleEntityFactory.createSale({
     id: SaleId.random().toString(),
     date: new Date('2020-03-11'),
     customer,

@@ -19,3 +19,7 @@ export interface IProductRepository {
   getAll(): Promise<Array<Product>>;
   get(id: ProductId): Promise<Product>;
 }
+
+export interface IProductEntityFactory {
+  createProduct({ id, name, price }: IProductJSON): Product;
+}

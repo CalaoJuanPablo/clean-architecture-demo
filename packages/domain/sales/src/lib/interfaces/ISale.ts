@@ -37,3 +37,13 @@ export interface ISaleRepository {
   get(id: SaleId): Promise<Sale>;
   add(sale: Sale): Promise<void>;
 }
+
+export interface ISaleEntityFactory {
+  createSale({
+    id,
+    date,
+    customer,
+    employee,
+    product,
+  }: Omit<ISaleJSON, 'quantity' | 'totalPrice'>): Sale;
+}

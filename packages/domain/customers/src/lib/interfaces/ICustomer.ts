@@ -14,5 +14,9 @@ export interface ICustomerJSON {
 
 export interface ICustomerRepository {
   getAll(): Promise<Array<Customer>>;
-  get(id: CustomerId): Promise<Customer>;
+  get(id: string): Promise<Customer>;
+}
+
+export interface ICustomerEntityFactory {
+  createCustomer({ id, name }: ICustomerJSON): Customer;
 }

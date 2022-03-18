@@ -6,7 +6,8 @@ describe('Product', () => {
   const productId = ProductId.random().toString();
   const productName = 'Pasta';
   const productPrice = 30;
-  const product = ProductEntityFactory.product({
+  const productEntityFactory = new ProductEntityFactory();
+  const product = productEntityFactory.createProduct({
     id: productId,
     name: productName,
     price: productPrice,
